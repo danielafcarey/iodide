@@ -1,5 +1,5 @@
 from django.http import HttpResponse
 
 
-def index(request):
+def hello(request):
     return HttpResponse('Hello from Python!')

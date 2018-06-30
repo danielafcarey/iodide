@@ -7,6 +7,6 @@ admin.autodiscover()
 import server.api.views
 
 urlpatterns = [
-    url(r'^$', server.api.views.index, name='index'),
+    url(r'^hello$', server.api.views.hello, name='hello'),
     path('admin/', admin.site.urls),
 ]
