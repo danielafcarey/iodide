@@ -103,7 +103,7 @@ module.exports = (env) => {
       ...plugins,
       new CreateFileWebpack({
         path: BUILD_DIR,
-        fileName: `iodide.${APP_VERSION_STRING}.html`,
+        fileName: (env == 'heroku') ? 'index.html' : `iodide.${APP_VERSION_STRING}.html`,
         content: htmlTemplateCompiler({
           APP_VERSION_STRING,
           APP_PATH_STRING,
